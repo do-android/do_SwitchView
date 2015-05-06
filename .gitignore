@@ -1,0 +1,10 @@
+*.class
+*.apk
+bin/
+gen/
+.settings/
+proguard/
+*.classpath
+/doExt_do_SwitchView/do_SwitchView.zip
+/doExt_do_SwitchView/do_build.xml
+/doExt_do_SwitchView/libs/docore.jar

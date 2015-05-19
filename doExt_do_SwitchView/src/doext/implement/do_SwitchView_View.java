@@ -7,7 +7,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import core.helper.DoTextHelper;
 import core.helper.DoUIModuleHelper;
-import core.helper.jsonparse.DoJsonNode;
+import org.json.JSONObject;
 import core.interfaces.DoIScriptEngine;
 import core.interfaces.DoIUIModuleView;
 import core.object.DoInvokeResult;
@@ -80,7 +80,7 @@ public class do_SwitchView_View extends Switch implements DoIUIModuleView, do_Sw
 	 * @_invokeResult 用于返回方法结果对象
 	 */
 	@Override
-	public boolean invokeSyncMethod(String _methodName, DoJsonNode _dictParas,
+	public boolean invokeSyncMethod(String _methodName, JSONObject _dictParas,
 			DoIScriptEngine _scriptEngine, DoInvokeResult _invokeResult)throws Exception {
 		//...do something
 		return false;
@@ -99,7 +99,7 @@ public class do_SwitchView_View extends Switch implements DoIUIModuleView, do_Sw
 	   获取DoInvokeResult对象方式new DoInvokeResult(this.getUniqueKey());
 	 */
 	@Override
-	public boolean invokeAsyncMethod(String _methodName, DoJsonNode _dictParas,
+	public boolean invokeAsyncMethod(String _methodName, JSONObject _dictParas,
 			DoIScriptEngine _scriptEngine, String _callbackFuncName) {
 		//...do something
 		return false;

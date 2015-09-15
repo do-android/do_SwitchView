@@ -128,7 +128,16 @@ public class DoCustomSwitch extends View {
 			paint.setAlpha(alpha);
 			canvas.drawRect(backRect, paint);
 
-			frontRect = new Rect(frontRect_left, RIM_SIZE, frontRect_left + getMeasuredWidth() / 2 - RIM_SIZE, getMeasuredHeight() - RIM_SIZE);
+			int w = getMeasuredWidth() / 2;
+
+			int l = frontRect_left;
+			if (frontRect_left > w) {
+				l = w;
+			} else if (frontRect_left < min_left) {
+				l = min_left;
+			}
+
+			frontRect = new Rect(l, RIM_SIZE, l + w - RIM_SIZE, getMeasuredHeight() - RIM_SIZE);
 			paint.setColor(sliderBarColor);
 			canvas.drawRect(frontRect, paint);
 		} else {
@@ -141,7 +150,18 @@ public class DoCustomSwitch extends View {
 			paint.setAlpha(alpha);
 			canvas.drawRoundRect(new RectF(backRect), radius, radius, paint);
 
-			frontRect = new Rect(frontRect_left, RIM_SIZE, frontRect_left + backRect.height() - 2 * RIM_SIZE, backRect.height() - RIM_SIZE);
+			int l = frontRect_left;
+			int maxRight = backRect.width() - backRect.height() + RIM_SIZE;
+
+			if (frontRect_left > maxRight) {
+				l = maxRight;
+			}
+
+			if (frontRect_left < min_left) {
+				l = min_left;
+			}
+
+			frontRect = new Rect(l, RIM_SIZE, l + backRect.height() - 2 * RIM_SIZE, backRect.height() - RIM_SIZE);
 			paint.setColor(sliderBarColor);
 			canvas.drawRoundRect(new RectF(frontRect), radius, radius, paint);
 		}

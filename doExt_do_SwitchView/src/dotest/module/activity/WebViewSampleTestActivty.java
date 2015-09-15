@@ -30,7 +30,8 @@ public class WebViewSampleTestActivty extends DoTestActivity{
 	protected void initUIView() throws Exception {
 		do_SwitchView_View view = new do_SwitchView_View(this);
 //		view.setColors("8800FF00,FF8888,FFFF00");
-		view.setLayoutParams(new LayoutParams(200, 90));
+		view.setShapeType(0);
+		view.setLayoutParams(new LayoutParams(300, 90));
         DoPage _doPage = new DoPage();
         ((DoUIModule)this.model).setCurrentUIModuleView(view);
         ((DoUIModule)this.model).setCurrentPage(_doPage);

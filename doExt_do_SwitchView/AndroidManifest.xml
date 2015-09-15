@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-sdk
-        deviceone:minSdkVersion="8"
+        deviceone:minSdkVersion="14"
         deviceone:targetSdkVersion="19" />
 
     <application

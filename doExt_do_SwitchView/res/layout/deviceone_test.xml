@@ -28,6 +28,7 @@
         android:layout_above="@+id/bottom_bar"
         android:layout_below="@+id/header"
         android:background="@drawable/red"
+        android:padding="20dip"
         android:orientation="vertical" >
     </LinearLayout>
 

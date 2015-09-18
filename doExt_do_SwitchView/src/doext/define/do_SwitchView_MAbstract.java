@@ -19,5 +19,7 @@ public abstract class do_SwitchView_MAbstract extends DoUIModule{
         super.onInit();
         //注册属性
 		this.registProperty(new DoProperty("checked", PropertyDataType.Bool, "false", false));
+		this.registProperty(new DoProperty("colors", PropertyDataType.String, "00FF00,888888,FFFFFF", true));
+		this.registProperty(new DoProperty("shape", PropertyDataType.String, "circle", true));
 	}
 }

@@ -192,6 +192,7 @@ public class DoCustomSwitch extends View {
 			}
 			break;
 		case MotionEvent.ACTION_UP:
+		case MotionEvent.ACTION_CANCEL:
 			int wholeX = (int) (event.getRawX() - eventStartX);
 			frontRect_left_begin = frontRect_left;
 			boolean toRight = (frontRect_left_begin > max_left / 2 ? true : false);

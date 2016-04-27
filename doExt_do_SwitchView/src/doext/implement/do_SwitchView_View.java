@@ -41,6 +41,7 @@ public class do_SwitchView_View extends DoCustomSwitch implements DoIUIModuleVie
 		this.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(boolean isChecked) {
+				model.setPropertyValue("checked", isChecked + "");
 				DoInvokeResult jsonResult = new DoInvokeResult(model.getUniqueKey());
 				jsonResult.setResultBoolean(isChecked);
 				model.getEventCenter().fireEvent("changed", jsonResult);
